@@ -1,0 +1,292 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		012E7DC51C32FD3000280D0E /* KGViewSeparatorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 012E7DC41C32FD3000280D0E /* KGViewSeparatorsTests.m */; };
+		015C773F1C330C9A00ED8ADE /* KGViewSeparatorConfiguration+Defaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C77381C330C9A00ED8ADE /* KGViewSeparatorConfiguration+Defaults.m */; };
+		015C77401C330C9A00ED8ADE /* KGViewSeparatorConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C773A1C330C9A00ED8ADE /* KGViewSeparatorConfiguration.m */; };
+		015C77411C330C9A00ED8ADE /* UITableViewCell+KGViewSeparators.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C773C1C330C9A00ED8ADE /* UITableViewCell+KGViewSeparators.m */; };
+		015C77421C330C9A00ED8ADE /* UIView+KGViewSeparators.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C773E1C330C9A00ED8ADE /* UIView+KGViewSeparators.m */; };
+		01EF7B321C3839DD00D9852B /* KGViewSeparatorsViewHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF7B311C3839DD00D9852B /* KGViewSeparatorsViewHelperTests.m */; };
+		01EF7B361C383A6E00D9852B /* KGViewSeparatorsCellHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF7B351C383A6E00D9852B /* KGViewSeparatorsCellHelperTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		012E7DC11C32FD3000280D0E /* KGViewSeparatorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KGViewSeparatorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		012E7DC41C32FD3000280D0E /* KGViewSeparatorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KGViewSeparatorsTests.m; sourceTree = "<group>"; };
+		012E7DC61C32FD3000280D0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		015C77371C330C9A00ED8ADE /* KGViewSeparatorConfiguration+Defaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KGViewSeparatorConfiguration+Defaults.h"; sourceTree = "<group>"; };
+		015C77381C330C9A00ED8ADE /* KGViewSeparatorConfiguration+Defaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KGViewSeparatorConfiguration+Defaults.m"; sourceTree = "<group>"; };
+		015C77391C330C9A00ED8ADE /* KGViewSeparatorConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGViewSeparatorConfiguration.h; sourceTree = "<group>"; };
+		015C773A1C330C9A00ED8ADE /* KGViewSeparatorConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGViewSeparatorConfiguration.m; sourceTree = "<group>"; };
+		015C773B1C330C9A00ED8ADE /* UITableViewCell+KGViewSeparators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+KGViewSeparators.h"; sourceTree = "<group>"; };
+		015C773C1C330C9A00ED8ADE /* UITableViewCell+KGViewSeparators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+KGViewSeparators.m"; sourceTree = "<group>"; };
+		015C773D1C330C9A00ED8ADE /* UIView+KGViewSeparators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KGViewSeparators.h"; sourceTree = "<group>"; };
+		015C773E1C330C9A00ED8ADE /* UIView+KGViewSeparators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KGViewSeparators.m"; sourceTree = "<group>"; };
+		01EF7B311C3839DD00D9852B /* KGViewSeparatorsViewHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGViewSeparatorsViewHelperTests.m; sourceTree = "<group>"; };
+		01EF7B351C383A6E00D9852B /* KGViewSeparatorsCellHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGViewSeparatorsCellHelperTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		012E7DBE1C32FD3000280D0E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		012E7DB61C32FCF600280D0E = {
+			isa = PBXGroup;
+			children = (
+				012E7DC31C32FD3000280D0E /* KGViewSeparatorsTests */,
+				012E7DC21C32FD3000280D0E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		012E7DC21C32FD3000280D0E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				012E7DC11C32FD3000280D0E /* KGViewSeparatorsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		012E7DC31C32FD3000280D0E /* KGViewSeparatorsTests */ = {
+			isa = PBXGroup;
+			children = (
+				012E7DC41C32FD3000280D0E /* KGViewSeparatorsTests.m */,
+				01EF7B311C3839DD00D9852B /* KGViewSeparatorsViewHelperTests.m */,
+				01EF7B351C383A6E00D9852B /* KGViewSeparatorsCellHelperTests.m */,
+				012E7DC61C32FD3000280D0E /* Info.plist */,
+				015C77361C330C9A00ED8ADE /* KGViewSeparators */,
+			);
+			path = KGViewSeparatorsTests;
+			sourceTree = "<group>";
+		};
+		015C77361C330C9A00ED8ADE /* KGViewSeparators */ = {
+			isa = PBXGroup;
+			children = (
+				015C77371C330C9A00ED8ADE /* KGViewSeparatorConfiguration+Defaults.h */,
+				015C77381C330C9A00ED8ADE /* KGViewSeparatorConfiguration+Defaults.m */,
+				015C77391C330C9A00ED8ADE /* KGViewSeparatorConfiguration.h */,
+				015C773A1C330C9A00ED8ADE /* KGViewSeparatorConfiguration.m */,
+				015C773B1C330C9A00ED8ADE /* UITableViewCell+KGViewSeparators.h */,
+				015C773C1C330C9A00ED8ADE /* UITableViewCell+KGViewSeparators.m */,
+				015C773D1C330C9A00ED8ADE /* UIView+KGViewSeparators.h */,
+				015C773E1C330C9A00ED8ADE /* UIView+KGViewSeparators.m */,
+			);
+			name = KGViewSeparators;
+			path = ../../KGViewSeparators;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		012E7DC01C32FD3000280D0E /* KGViewSeparatorsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 012E7DC71C32FD3000280D0E /* Build configuration list for PBXNativeTarget "KGViewSeparatorsTests" */;
+			buildPhases = (
+				012E7DBD1C32FD3000280D0E /* Sources */,
+				012E7DBE1C32FD3000280D0E /* Frameworks */,
+				012E7DBF1C32FD3000280D0E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KGViewSeparatorsTests;
+			productName = KGViewSeparatorsTests;
+			productReference = 012E7DC11C32FD3000280D0E /* KGViewSeparatorsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		012E7DB71C32FCF600280D0E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				TargetAttributes = {
+					012E7DC01C32FD3000280D0E = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 012E7DBA1C32FCF600280D0E /* Build configuration list for PBXProject "KGViewSeparatorsTests" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 012E7DB61C32FCF600280D0E;
+			productRefGroup = 012E7DC21C32FD3000280D0E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				012E7DC01C32FD3000280D0E /* KGViewSeparatorsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		012E7DBF1C32FD3000280D0E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		012E7DBD1C32FD3000280D0E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01EF7B361C383A6E00D9852B /* KGViewSeparatorsCellHelperTests.m in Sources */,
+				01EF7B321C3839DD00D9852B /* KGViewSeparatorsViewHelperTests.m in Sources */,
+				015C77421C330C9A00ED8ADE /* UIView+KGViewSeparators.m in Sources */,
+				012E7DC51C32FD3000280D0E /* KGViewSeparatorsTests.m in Sources */,
+				015C773F1C330C9A00ED8ADE /* KGViewSeparatorConfiguration+Defaults.m in Sources */,
+				015C77411C330C9A00ED8ADE /* UITableViewCell+KGViewSeparators.m in Sources */,
+				015C77401C330C9A00ED8ADE /* KGViewSeparatorConfiguration.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		012E7DBB1C32FCF600280D0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		012E7DBC1C32FCF600280D0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		012E7DC81C32FD3000280D0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = KGViewSeparatorsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kg.KGViewSeparatorsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		012E7DC91C32FD3000280D0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = KGViewSeparatorsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kg.KGViewSeparatorsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		012E7DBA1C32FCF600280D0E /* Build configuration list for PBXProject "KGViewSeparatorsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				012E7DBB1C32FCF600280D0E /* Debug */,
+				012E7DBC1C32FCF600280D0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		012E7DC71C32FD3000280D0E /* Build configuration list for PBXNativeTarget "KGViewSeparatorsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				012E7DC81C32FD3000280D0E /* Debug */,
+				012E7DC91C32FD3000280D0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 012E7DB71C32FCF600280D0E /* Project object */;
+}

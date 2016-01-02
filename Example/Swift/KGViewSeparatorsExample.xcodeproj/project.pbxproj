@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01C486991C31C078004E91E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C486981C31C078004E91E5 /* AppDelegate.swift */; };
+		01C4869B1C31C078004E91E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C4869A1C31C078004E91E5 /* ViewController.swift */; };
+		01C4869E1C31C078004E91E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C4869C1C31C078004E91E5 /* Main.storyboard */; };
+		01C486A01C31C078004E91E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C4869F1C31C078004E91E5 /* Assets.xcassets */; };
+		01C486A31C31C078004E91E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C486A11C31C078004E91E5 /* LaunchScreen.storyboard */; };
+		01E835471C31C0E800B59665 /* KGViewSeparatorConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E835431C31C0E800B59665 /* KGViewSeparatorConfiguration.m */; };
+		01E835481C31C0E800B59665 /* KGViewSeparatorConfiguration+Defaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E835441C31C0E800B59665 /* KGViewSeparatorConfiguration+Defaults.m */; };
+		01E835491C31C0E800B59665 /* UITableViewCell+KGViewSeparators.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E835451C31C0E800B59665 /* UITableViewCell+KGViewSeparators.m */; };
+		01E8354A1C31C0E800B59665 /* UIView+KGViewSeparators.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E835461C31C0E800B59665 /* UIView+KGViewSeparators.m */; };
+		01E8354D1C31C2C100B59665 /* UITableViewCell+Separators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E8354C1C31C2C100B59665 /* UITableViewCell+Separators.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01C486951C31C078004E91E5 /* KGViewSeparatorsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KGViewSeparatorsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		01C486981C31C078004E91E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		01C4869A1C31C078004E91E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		01C4869D1C31C078004E91E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		01C4869F1C31C078004E91E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		01C486A21C31C078004E91E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		01C486A41C31C078004E91E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01E8353F1C31C0E800B59665 /* KGViewSeparatorConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGViewSeparatorConfiguration.h; sourceTree = "<group>"; };
+		01E835401C31C0E800B59665 /* KGViewSeparatorConfiguration+Defaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KGViewSeparatorConfiguration+Defaults.h"; sourceTree = "<group>"; };
+		01E835411C31C0E800B59665 /* UITableViewCell+KGViewSeparators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+KGViewSeparators.h"; sourceTree = "<group>"; };
+		01E835421C31C0E800B59665 /* UIView+KGViewSeparators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KGViewSeparators.h"; sourceTree = "<group>"; };
+		01E835431C31C0E800B59665 /* KGViewSeparatorConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGViewSeparatorConfiguration.m; sourceTree = "<group>"; };
+		01E835441C31C0E800B59665 /* KGViewSeparatorConfiguration+Defaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KGViewSeparatorConfiguration+Defaults.m"; sourceTree = "<group>"; };
+		01E835451C31C0E800B59665 /* UITableViewCell+KGViewSeparators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+KGViewSeparators.m"; sourceTree = "<group>"; };
+		01E835461C31C0E800B59665 /* UIView+KGViewSeparators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KGViewSeparators.m"; sourceTree = "<group>"; };
+		01E8354B1C31C11700B59665 /* KGViewSeparatorsExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KGViewSeparatorsExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		01E8354C1C31C2C100B59665 /* UITableViewCell+Separators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Separators.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01C486921C31C078004E91E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01C4868C1C31C078004E91E5 = {
+			isa = PBXGroup;
+			children = (
+				01C486971C31C078004E91E5 /* KGViewSeparatorsExample */,
+				01C486961C31C078004E91E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		01C486961C31C078004E91E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				01C486951C31C078004E91E5 /* KGViewSeparatorsExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		01C486971C31C078004E91E5 /* KGViewSeparatorsExample */ = {
+			isa = PBXGroup;
+			children = (
+				01E8354B1C31C11700B59665 /* KGViewSeparatorsExample-Bridging-Header.h */,
+				01C486981C31C078004E91E5 /* AppDelegate.swift */,
+				01C4869A1C31C078004E91E5 /* ViewController.swift */,
+				01E8354C1C31C2C100B59665 /* UITableViewCell+Separators.swift */,
+				01C4869C1C31C078004E91E5 /* Main.storyboard */,
+				01C4869F1C31C078004E91E5 /* Assets.xcassets */,
+				01C486A11C31C078004E91E5 /* LaunchScreen.storyboard */,
+				01C486A41C31C078004E91E5 /* Info.plist */,
+				01E8353D1C31C0CE00B59665 /* KGViewSeparators */,
+			);
+			path = KGViewSeparatorsExample;
+			sourceTree = "<group>";
+		};
+		01E8353D1C31C0CE00B59665 /* KGViewSeparators */ = {
+			isa = PBXGroup;
+			children = (
+				01E835421C31C0E800B59665 /* UIView+KGViewSeparators.h */,
+				01E835461C31C0E800B59665 /* UIView+KGViewSeparators.m */,
+				01E8353F1C31C0E800B59665 /* KGViewSeparatorConfiguration.h */,
+				01E835431C31C0E800B59665 /* KGViewSeparatorConfiguration.m */,
+				01E835401C31C0E800B59665 /* KGViewSeparatorConfiguration+Defaults.h */,
+				01E835441C31C0E800B59665 /* KGViewSeparatorConfiguration+Defaults.m */,
+				01E835411C31C0E800B59665 /* UITableViewCell+KGViewSeparators.h */,
+				01E835451C31C0E800B59665 /* UITableViewCell+KGViewSeparators.m */,
+			);
+			name = KGViewSeparators;
+			path = ../../../KGViewSeparators;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		01C486941C31C078004E91E5 /* KGViewSeparatorsExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01C486A71C31C078004E91E5 /* Build configuration list for PBXNativeTarget "KGViewSeparatorsExample" */;
+			buildPhases = (
+				01C486911C31C078004E91E5 /* Sources */,
+				01C486921C31C078004E91E5 /* Frameworks */,
+				01C486931C31C078004E91E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KGViewSeparatorsExample;
+			productName = KGViewSeparatorsExample;
+			productReference = 01C486951C31C078004E91E5 /* KGViewSeparatorsExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		01C4868D1C31C078004E91E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = KG;
+				TargetAttributes = {
+					01C486941C31C078004E91E5 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 01C486901C31C078004E91E5 /* Build configuration list for PBXProject "KGViewSeparatorsExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 01C4868C1C31C078004E91E5;
+			productRefGroup = 01C486961C31C078004E91E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				01C486941C31C078004E91E5 /* KGViewSeparatorsExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01C486931C31C078004E91E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01C486A31C31C078004E91E5 /* LaunchScreen.storyboard in Resources */,
+				01C486A01C31C078004E91E5 /* Assets.xcassets in Resources */,
+				01C4869E1C31C078004E91E5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		01C486911C31C078004E91E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01C4869B1C31C078004E91E5 /* ViewController.swift in Sources */,
+				01E8354D1C31C2C100B59665 /* UITableViewCell+Separators.swift in Sources */,
+				01C486991C31C078004E91E5 /* AppDelegate.swift in Sources */,
+				01E835471C31C0E800B59665 /* KGViewSeparatorConfiguration.m in Sources */,
+				01E8354A1C31C0E800B59665 /* UIView+KGViewSeparators.m in Sources */,
+				01E835491C31C0E800B59665 /* UITableViewCell+KGViewSeparators.m in Sources */,
+				01E835481C31C0E800B59665 /* KGViewSeparatorConfiguration+Defaults.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		01C4869C1C31C078004E91E5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01C4869D1C31C078004E91E5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		01C486A11C31C078004E91E5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				01C486A21C31C078004E91E5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		01C486A51C31C078004E91E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		01C486A61C31C078004E91E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		01C486A81C31C078004E91E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = KGViewSeparatorsExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kg.KGViewSeparatorsExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KGViewSeparatorsExample/KGViewSeparatorsExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		01C486A91C31C078004E91E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = KGViewSeparatorsExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kg.KGViewSeparatorsExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KGViewSeparatorsExample/KGViewSeparatorsExample-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01C486901C31C078004E91E5 /* Build configuration list for PBXProject "KGViewSeparatorsExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01C486A51C31C078004E91E5 /* Debug */,
+				01C486A61C31C078004E91E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01C486A71C31C078004E91E5 /* Build configuration list for PBXNativeTarget "KGViewSeparatorsExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01C486A81C31C078004E91E5 /* Debug */,
+				01C486A91C31C078004E91E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 01C4868D1C31C078004E91E5 /* Project object */;
+}
