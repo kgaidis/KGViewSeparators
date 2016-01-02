@@ -11,6 +11,15 @@ Core Principles:
 2. Customization
 3. Support for view reuse
 
+## Installation
+
+To install using [CocoaPods](https://github.com/cocoapods/cocoapods), add the following to your project Podfile:
+
+```ruby
+pod 'KGViewSeparators'
+```
+
+Alternatively, drag and drop all of the files in the KGViewSeparators folder into your Xcode project, agreeing to copy files if needed.
 
 ## How to Use
 
