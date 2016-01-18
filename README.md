@@ -52,10 +52,10 @@ Create your own category to simplify code.
 #import <UITableViewCell+KGViewSeparators.h>
 @implementation UITableViewCell (Separators)
 - (void)showTopSeparator:(BOOL)show {
-    [self kg_showTopSeparator:YES color:[UIColor blackColor] lineWidth:1.0 insets:UIEdgeInsetsZero];
+    [self kg_showTopSeparator:show color:[UIColor blackColor] lineWidth:1.0 insets:UIEdgeInsetsZero];
 }
 - (void)showBottomSeparator:(BOOL)show {
-    [self kg_showBottomSeparator:YES color:[UIColor blackColor] lineWidth:1.0 insets:UIEdgeInsetsZero];
+    [self kg_showBottomSeparator:show color:[UIColor blackColor] lineWidth:1.0 insets:UIEdgeInsetsZero];
 }
 @end
 ```
