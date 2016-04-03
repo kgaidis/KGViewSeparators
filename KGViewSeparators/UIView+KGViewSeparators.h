@@ -29,15 +29,22 @@
 #import <UIKit/UIKit.h>
 #import "KGViewSeparatorConfiguration.h"
 
+typedef NS_ENUM(NSUInteger, KGViewSeparatorType) {
+    KGViewSeparatorTop      = 1 << 0,
+    KGViewSeparatorBottom   = 1 << 1
+};
+
 @interface UIView (KGViewSeparators)
 
 #pragma mark - Main Interface -
 
+- (void)kg_show:(BOOL)show separator:(KGViewSeparatorType)type configuration:(KGViewSeparatorConfiguration *)configuration;
+
+
 - (void)kg_showTopSeparator:(BOOL)show configuration:(KGViewSeparatorConfiguration *)configuration;
 - (void)kg_showBottomSeparator:(BOOL)show configuration:(KGViewSeparatorConfiguration *)configuration;
 
-- (KGViewSeparatorConfiguration *)kg_topSeparatorConfiguration;
-- (KGViewSeparatorConfiguration *)kg_bottomSeparatorConfiguration;
+- (KGViewSeparatorConfiguration *)kg_configurationForSeparatorOfType:(KGViewSeparatorType)type;
 
 #pragma mark - Helper Interface -
 

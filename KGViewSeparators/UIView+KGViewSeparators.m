@@ -49,23 +49,31 @@ static NSString *const kKGViewKey = @"ViewKey";
 
 #pragma mark - Main Public Methods -
 
+- (void)kg_show:(BOOL)show separator:(KGViewSeparatorType)type configuration:(KGViewSeparatorConfiguration *)configuration {
+    if (show) {
+        NSAssert(configuration, @"For a separator view to be shown correctly, a configuration must be provided.");
+    }
+    
+    
+}
+
 - (void)kg_showTopSeparator:(BOOL)show configuration:(KGViewSeparatorConfiguration *)configuration {
     if (show) {
         NSAssert(configuration, @"For a separator view to be shown correctly, a configuration must be provided.");
     }
     
-    UIView *topSeparator = [self kg_topSeparatorView];
+    UIView *topSeparator = [self kg_separatorViewOfType:KGViewSeparatorTop];
     if (show && !topSeparator) {
         topSeparator = [self kg_createAndInsertSeparatorView];
-        [self kg_setTopSeparatorView:topSeparator];
+        [self kg_setSeparatorView:topSeparator type:KGViewSeparatorTop];
     }
     
-    KGViewSeparatorConfiguration *oldConfiguration = [self kg_topSeparatorConfiguration];
+    KGViewSeparatorConfiguration *oldConfiguration = [self kg_configurationForSeparatorOfType:KGViewSeparatorTop];
     if (show && ![oldConfiguration isEqual:configuration]) {
         [self kg_removeAllConstraintsForSeparatorView:topSeparator];
         [self kg_addTopSeparatorViewConstraintsWithConfiguration:configuration];
         [self kg_configureView:topSeparator withConfiguration:configuration];
-        [self kg_setTopSeparatorConfiguration:configuration];
+        [self kg_setConfiguration:configuration forSeparatorOfType:KGViewSeparatorTop];
     }
     
     topSeparator.hidden = !show;
@@ -76,18 +84,18 @@ static NSString *const kKGViewKey = @"ViewKey";
         NSAssert(configuration, @"For a separator view to be shown correctly, a configuration must be provided.");
     }
     
-    UIView *bottomSeparator = [self kg_bottomSeparatorView];
+    UIView *bottomSeparator = [self kg_separatorViewOfType:KGViewSeparatorBottom];
     if (show && !bottomSeparator) {
         bottomSeparator = [self kg_createAndInsertSeparatorView];
-        [self kg_setBottomSeparatorView:bottomSeparator];
+        [self kg_setSeparatorView:bottomSeparator type:KGViewSeparatorBottom];
     }
     
-    KGViewSeparatorConfiguration *oldConfiguration = [self kg_bottomSeparatorConfiguration];
+    KGViewSeparatorConfiguration *oldConfiguration = [self kg_configurationForSeparatorOfType:KGViewSeparatorBottom];
     if (show && ![oldConfiguration isEqual:configuration]) {
         [self kg_removeAllConstraintsForSeparatorView:bottomSeparator];
         [self kg_addBottomSeparatorViewConstraintsWithConfiguration:configuration];
         [self kg_configureView:bottomSeparator withConfiguration:configuration];
-        [self kg_setBottomSeparatorConfiguration:configuration];
+        [self kg_setConfiguration:configuration forSeparatorOfType:KGViewSeparatorBottom];
     }
     
     bottomSeparator.hidden = !show;
@@ -144,7 +152,7 @@ static NSString *const kKGViewKey = @"ViewKey";
 }
 
 - (void)kg_addTopSeparatorViewConstraintsWithConfiguration:(KGViewSeparatorConfiguration *)configuration {
-    UIView *topSeparatorView = [self kg_topSeparatorView];
+    UIView *topSeparatorView = [self kg_separatorViewOfType:KGViewSeparatorTop];
     NSDictionary *viewDictionary = @{kKGViewKey: topSeparatorView};
     NSString *verticalVisualFormatString = [NSString stringWithFormat:@"V:|[%@(==%f)]", kKGViewKey, configuration.lineWidth];
     NSString *horizontalVisualFormatString = [NSString stringWithFormat:@"H:|-%f-[%@]-%f-|", configuration.insets.left, kKGViewKey, configuration.insets.right];
@@ -156,7 +164,7 @@ static NSString *const kKGViewKey = @"ViewKey";
 }
 
 - (void)kg_addBottomSeparatorViewConstraintsWithConfiguration:(KGViewSeparatorConfiguration *)configuration {
-    UIView *bottomSeparatorView = [self kg_bottomSeparatorView];
+    UIView *bottomSeparatorView = [self kg_separatorViewOfType:KGViewSeparatorBottom];
     NSDictionary *viewDictionary = @{kKGViewKey: bottomSeparatorView};
     NSString *verticalVisualFormatString = [NSString stringWithFormat:@"V:[%@(==%f)]|", kKGViewKey, configuration.lineWidth];
     NSString *horizontalVisualFormatString = [NSString stringWithFormat:@"H:|-%f-[%@]-%f-|", configuration.insets.left, kKGViewKey, configuration.insets.right];
@@ -178,25 +186,39 @@ static NSString *const kKGViewKey = @"ViewKey";
     [separatorView removeConstraints:separatorView.constraints];
 }
 
+#pragma mark - Key Generators -
+
+- (NSString *)kg_separatorViewKeyOfType:(KGViewSeparatorType)type {
+    return [NSString stringWithFormat:@"%lu_SeparatorView", (unsigned long)type];
+}
+
 #pragma mark - Map Table Getters -
 
-- (UIView *)kg_topSeparatorView {
-    return [[self kg_viewMapTable] objectForKey:kKGTopSeparatorViewKey];
+- (UIView *)kg_separatorViewOfType:(KGViewSeparatorType)type {
+    return [[self kg_viewMapTable] objectForKey:[self kg_separatorViewKeyOfType:type]];
 }
 
-- (UIView *)kg_bottomSeparatorView {
-    return [[self kg_viewMapTable] objectForKey:kKGBottomSeparatorViewKey];
-}
+//- (UIView *)kg_topSeparatorView {
+//    return [[self kg_viewMapTable] objectForKey:kKGTopSeparatorViewKey];
+//}
+//
+//- (UIView *)kg_bottomSeparatorView {
+//    return [[self kg_viewMapTable] objectForKey:kKGBottomSeparatorViewKey];
+//}
 
 #pragma mark - Map Table Setters -
 
-- (void)kg_setTopSeparatorView:(UIView *)topSeparator {
-    [[self kg_viewMapTable] setObject:topSeparator forKey:kKGTopSeparatorViewKey];
+- (void)kg_setSeparatorView:(UIView *)separatorView type:(KGViewSeparatorType)type {
+    [[self kg_viewMapTable] setObject:separatorView forKey:[self kg_separatorViewKeyOfType:type]];
 }
 
-- (void)kg_setBottomSeparatorView:(UIView *)bottomSeparator {
-    [[self kg_viewMapTable] setObject:bottomSeparator forKey:kKGBottomSeparatorViewKey];
-}
+//- (void)kg_setTopSeparatorView:(UIView *)topSeparator {
+//    [[self kg_viewMapTable] setObject:topSeparator forKey:kKGTopSeparatorViewKey];
+//}
+//
+//- (void)kg_setBottomSeparatorView:(UIView *)bottomSeparator {
+//    [[self kg_viewMapTable] setObject:bottomSeparator forKey:kKGBottomSeparatorViewKey];
+//}
 
 #pragma mark - Dictionary Getters -
 
@@ -205,23 +227,35 @@ static NSString *const kKGViewKey = @"ViewKey";
 // type of configuration, then we need to reset the constraints.
 // Otherwise, we don't do anything.
 
-- (KGViewSeparatorConfiguration *)kg_topSeparatorConfiguration {
-    return [[self kg_configurationDictionary] objectForKey:kKGTopSeparatorConfigurationKey];
-}
+//- (KGViewSeparatorConfiguration *)kg_topSeparatorConfiguration {
+//    return [[self kg_configurationDictionary] objectForKey:kKGTopSeparatorConfigurationKey];
+//}
+//
+//- (KGViewSeparatorConfiguration *)kg_bottomSeparatorConfiguration {
+//    return [[self kg_configurationDictionary] objectForKey:kKGBottomSeparatorConfigurationKey];
+//}
 
-- (KGViewSeparatorConfiguration *)kg_bottomSeparatorConfiguration {
-    return [[self kg_configurationDictionary] objectForKey:kKGBottomSeparatorConfigurationKey];
+- (KGViewSeparatorConfiguration *)kg_configurationForSeparatorOfType:(KGViewSeparatorType)type {
+    return [[self kg_configurationDictionary] objectForKey:[self kg_separatorViewKeyOfType:type]];
 }
 
 #pragma mark - Dictionary Setters -
 
-- (void)kg_setTopSeparatorConfiguration:(KGViewSeparatorConfiguration *)configuration {
-    [[self kg_configurationDictionary] setObject:configuration forKey:kKGTopSeparatorConfigurationKey];
+- (void)kg_setConfiguration:(KGViewSeparatorConfiguration *)configuration forSeparatorOfType:(KGViewSeparatorType)type {
+    [[self kg_configurationDictionary] setObject:configuration forKey:[self kg_separatorViewKeyOfType:type]];
 }
 
-- (void)kg_setBottomSeparatorConfiguration:(KGViewSeparatorConfiguration *)configuration {
-    [[self kg_configurationDictionary] setObject:configuration forKey:kKGBottomSeparatorConfigurationKey];
-}
+//- (void)kg_setSeparator:(KGViewSeparatorType)separator configuration:(KGViewSeparatorConfiguration *)configuration {
+//    [[self kg_configurationDictionary] setObject:configuration forKey:[self kg_separatorViewKeyOfType:separator]];
+//}
+
+//- (void)kg_setTopSeparatorConfiguration:(KGViewSeparatorConfiguration *)configuration {
+//    [[self kg_configurationDictionary] setObject:configuration forKey:kKGTopSeparatorConfigurationKey];
+//}
+//
+//- (void)kg_setBottomSeparatorConfiguration:(KGViewSeparatorConfiguration *)configuration {
+//    [[self kg_configurationDictionary] setObject:configuration forKey:kKGBottomSeparatorConfigurationKey];
+//}
 
 #pragma mark - Associated Object Handling -
 
