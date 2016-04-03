@@ -35,12 +35,12 @@ static char kKGMapTableKey;
 static char kKGDictionaryKey;
 
 // ViewAndConstraintMapTable
-static NSString *const kKGTopSeparatorViewKey = @"TopSeparatorView";
-static NSString *const kKGBottomSeparatorViewKey = @"BottomSeparatorView";
+//static NSString *const kKGTopSeparatorViewKey = @"TopSeparatorView";
+//static NSString *const kKGBottomSeparatorViewKey = @"BottomSeparatorView";
 
 // ConfigurationDictionary
-static NSString *const kKGTopSeparatorConfigurationKey = @"TopSeparatorConfigurationKey";
-static NSString *const kKGBottomSeparatorConfigurationKey = @"BottomSeparatorConfigurationKey";
+//static NSString *const kKGTopSeparatorConfigurationKey = @"TopSeparatorConfigurationKey";
+//static NSString *const kKGBottomSeparatorConfigurationKey = @"BottomSeparatorConfigurationKey";
 
 // Constraint Dictionary
 static NSString *const kKGViewKey = @"ViewKey";
@@ -49,56 +49,72 @@ static NSString *const kKGViewKey = @"ViewKey";
 
 #pragma mark - Main Public Methods -
 
-- (void)kg_show:(BOOL)show separator:(KGViewSeparatorType)type configuration:(KGViewSeparatorConfiguration *)configuration {
+- (void)kg_show:(BOOL)show separator:(KGViewSeparatorType)type configuration:(KGViewSeparatorConfiguration *)newConfiguration {
     if (show) {
-        NSAssert(configuration, @"For a separator view to be shown correctly, a configuration must be provided.");
+        NSAssert(newConfiguration, @"For a separator view to be shown correctly, a configuration must be provided.");
     }
     
+    UIView *separator = [self kg_separatorViewOfType:type];
+    if (show && !separator) {
+        separator = [self kg_createAndInsertSeparatorView];
+        [self kg_setSeparatorView:separator ofType:type];
+    }
     
+    KGViewSeparatorConfiguration *oldConfiguration = [self kg_configurationForSeparatorOfType:type];
+    if (show && ![oldConfiguration isEqual:newConfiguration]) {
+        [self kg_removeAllConstraintsForSeparatorView:separator];
+        [self kg_addViewConstraintsForSeparatorOfType:type withConfiguration:newConfiguration];
+        [self kg_configureView:separator withConfiguration:newConfiguration];
+        [self kg_setConfiguration:newConfiguration forSeparatorOfType:KGViewSeparatorTop];
+    }
+    
+    separator.hidden = !show;
 }
 
 - (void)kg_showTopSeparator:(BOOL)show configuration:(KGViewSeparatorConfiguration *)configuration {
-    if (show) {
-        NSAssert(configuration, @"For a separator view to be shown correctly, a configuration must be provided.");
-    }
-    
-    UIView *topSeparator = [self kg_separatorViewOfType:KGViewSeparatorTop];
-    if (show && !topSeparator) {
-        topSeparator = [self kg_createAndInsertSeparatorView];
-        [self kg_setSeparatorView:topSeparator type:KGViewSeparatorTop];
-    }
-    
-    KGViewSeparatorConfiguration *oldConfiguration = [self kg_configurationForSeparatorOfType:KGViewSeparatorTop];
-    if (show && ![oldConfiguration isEqual:configuration]) {
-        [self kg_removeAllConstraintsForSeparatorView:topSeparator];
-        [self kg_addTopSeparatorViewConstraintsWithConfiguration:configuration];
-        [self kg_configureView:topSeparator withConfiguration:configuration];
-        [self kg_setConfiguration:configuration forSeparatorOfType:KGViewSeparatorTop];
-    }
-    
-    topSeparator.hidden = !show;
+//    if (show) {
+//        NSAssert(configuration, @"For a separator view to be shown correctly, a configuration must be provided.");
+//    }
+//    
+//    UIView *topSeparator = [self kg_separatorViewOfType:KGViewSeparatorTop];
+//    if (show && !topSeparator) {
+//        topSeparator = [self kg_createAndInsertSeparatorView];
+//        [self kg_setSeparatorView:topSeparator ofType:KGViewSeparatorTop];
+//    }
+//    
+//    KGViewSeparatorConfiguration *oldConfiguration = [self kg_configurationForSeparatorOfType:KGViewSeparatorTop];
+//    if (show && ![oldConfiguration isEqual:configuration]) {
+//        [self kg_removeAllConstraintsForSeparatorView:topSeparator];
+////        [self kg_addTopSeparatorViewConstraintsWithConfiguration:configuration];
+//        [self kg_configureView:topSeparator withConfiguration:configuration];
+//        [self kg_setConfiguration:configuration forSeparatorOfType:KGViewSeparatorTop];
+//    }
+//    
+//    topSeparator.hidden = !show;
+    [self kg_show:show separator:KGViewSeparatorTop configuration:configuration];
 }
 
 - (void)kg_showBottomSeparator:(BOOL)show configuration:(KGViewSeparatorConfiguration *)configuration {
-    if (show) {
-        NSAssert(configuration, @"For a separator view to be shown correctly, a configuration must be provided.");
-    }
-    
-    UIView *bottomSeparator = [self kg_separatorViewOfType:KGViewSeparatorBottom];
-    if (show && !bottomSeparator) {
-        bottomSeparator = [self kg_createAndInsertSeparatorView];
-        [self kg_setSeparatorView:bottomSeparator type:KGViewSeparatorBottom];
-    }
-    
-    KGViewSeparatorConfiguration *oldConfiguration = [self kg_configurationForSeparatorOfType:KGViewSeparatorBottom];
-    if (show && ![oldConfiguration isEqual:configuration]) {
-        [self kg_removeAllConstraintsForSeparatorView:bottomSeparator];
-        [self kg_addBottomSeparatorViewConstraintsWithConfiguration:configuration];
-        [self kg_configureView:bottomSeparator withConfiguration:configuration];
-        [self kg_setConfiguration:configuration forSeparatorOfType:KGViewSeparatorBottom];
-    }
-    
-    bottomSeparator.hidden = !show;
+    [self kg_show:show separator:KGViewSeparatorBottom configuration:configuration];
+//    if (show) {
+//        NSAssert(configuration, @"For a separator view to be shown correctly, a configuration must be provided.");
+//    }
+//    
+//    UIView *bottomSeparator = [self kg_separatorViewOfType:KGViewSeparatorBottom];
+//    if (show && !bottomSeparator) {
+//        bottomSeparator = [self kg_createAndInsertSeparatorView];
+//        [self kg_setSeparatorView:bottomSeparator ofType:KGViewSeparatorBottom];
+//    }
+//    
+//    KGViewSeparatorConfiguration *oldConfiguration = [self kg_configurationForSeparatorOfType:KGViewSeparatorBottom];
+//    if (show && ![oldConfiguration isEqual:configuration]) {
+//        [self kg_removeAllConstraintsForSeparatorView:bottomSeparator];
+////        [self kg_addBottomSeparatorViewConstraintsWithConfiguration:configuration];
+//        [self kg_configureView:bottomSeparator withConfiguration:configuration];
+//        [self kg_setConfiguration:configuration forSeparatorOfType:KGViewSeparatorBottom];
+//    }
+//    
+//    bottomSeparator.hidden = !show;
 }
 
 #pragma mark - Public Helper Methods -
@@ -151,10 +167,11 @@ static NSString *const kKGViewKey = @"ViewKey";
     view.backgroundColor = configuration.color;
 }
 
-- (void)kg_addTopSeparatorViewConstraintsWithConfiguration:(KGViewSeparatorConfiguration *)configuration {
-    UIView *topSeparatorView = [self kg_separatorViewOfType:KGViewSeparatorTop];
-    NSDictionary *viewDictionary = @{kKGViewKey: topSeparatorView};
-    NSString *verticalVisualFormatString = [NSString stringWithFormat:@"V:|[%@(==%f)]", kKGViewKey, configuration.lineWidth];
+- (void)kg_addViewConstraintsForSeparatorOfType:(KGViewSeparatorType)type withConfiguration:(KGViewSeparatorConfiguration *)configuration {
+    
+    UIView *separatorView = [self kg_separatorViewOfType:type];
+    NSDictionary *viewDictionary = @{kKGViewKey: separatorView};
+    NSString *verticalVisualFormatString = [NSString stringWithFormat:[self verticalVisualFormatStringForSeparatorOfType:type], kKGViewKey, configuration.lineWidth];
     NSString *horizontalVisualFormatString = [NSString stringWithFormat:@"H:|-%f-[%@]-%f-|", configuration.insets.left, kKGViewKey, configuration.insets.right];
     
     NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:verticalVisualFormatString options:0 metrics:nil views:viewDictionary];
@@ -163,17 +180,41 @@ static NSString *const kKGViewKey = @"ViewKey";
     [self addConstraints:horizontalConstraints];
 }
 
-- (void)kg_addBottomSeparatorViewConstraintsWithConfiguration:(KGViewSeparatorConfiguration *)configuration {
-    UIView *bottomSeparatorView = [self kg_separatorViewOfType:KGViewSeparatorBottom];
-    NSDictionary *viewDictionary = @{kKGViewKey: bottomSeparatorView};
-    NSString *verticalVisualFormatString = [NSString stringWithFormat:@"V:[%@(==%f)]|", kKGViewKey, configuration.lineWidth];
-    NSString *horizontalVisualFormatString = [NSString stringWithFormat:@"H:|-%f-[%@]-%f-|", configuration.insets.left, kKGViewKey, configuration.insets.right];
-    
-    NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:verticalVisualFormatString options:0 metrics:nil views:viewDictionary];
-    NSArray *horizontalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:horizontalVisualFormatString options:0 metrics:nil views:viewDictionary];
-    [self addConstraints:verticalConstraints];
-    [self addConstraints:horizontalConstraints];
+- (NSString *)verticalVisualFormatStringForSeparatorOfType:(KGViewSeparatorType)type {
+    switch (type) {
+        case KGViewSeparatorTop:
+            return @"V:|[%@(==%f)]";
+            break;
+        case KGViewSeparatorBottom:
+            return @"V:[%@(==%f)]|";
+            break;
+    }
 }
+
+
+//- (void)kg_addTopSeparatorViewConstraintsWithConfiguration:(KGViewSeparatorConfiguration *)configuration {
+//    UIView *topSeparatorView = [self kg_separatorViewOfType:KGViewSeparatorTop];
+//    NSDictionary *viewDictionary = @{kKGViewKey: topSeparatorView};
+//    NSString *verticalVisualFormatString = [NSString stringWithFormat:@"V:|[%@(==%f)]", kKGViewKey, configuration.lineWidth];
+//    NSString *horizontalVisualFormatString = [NSString stringWithFormat:@"H:|-%f-[%@]-%f-|", configuration.insets.left, kKGViewKey, configuration.insets.right];
+//    
+//    NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:verticalVisualFormatString options:0 metrics:nil views:viewDictionary];
+//    NSArray *horizontalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:horizontalVisualFormatString options:0 metrics:nil views:viewDictionary];
+//    [self addConstraints:verticalConstraints];
+//    [self addConstraints:horizontalConstraints];
+//}
+//
+//- (void)kg_addBottomSeparatorViewConstraintsWithConfiguration:(KGViewSeparatorConfiguration *)configuration {
+//    UIView *bottomSeparatorView = [self kg_separatorViewOfType:KGViewSeparatorBottom];
+//    NSDictionary *viewDictionary = @{kKGViewKey: bottomSeparatorView};
+//    NSString *verticalVisualFormatString = [NSString stringWithFormat:@"V:[%@(==%f)]|", kKGViewKey, configuration.lineWidth];
+//    NSString *horizontalVisualFormatString = [NSString stringWithFormat:@"H:|-%f-[%@]-%f-|", configuration.insets.left, kKGViewKey, configuration.insets.right];
+//    
+//    NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:verticalVisualFormatString options:0 metrics:nil views:viewDictionary];
+//    NSArray *horizontalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:horizontalVisualFormatString options:0 metrics:nil views:viewDictionary];
+//    [self addConstraints:verticalConstraints];
+//    [self addConstraints:horizontalConstraints];
+//}
 
 - (void)kg_removeAllConstraintsForSeparatorView:(UIView *)separatorView {
     NSMutableArray *constraintsToRemove = [NSMutableArray new];
@@ -208,7 +249,7 @@ static NSString *const kKGViewKey = @"ViewKey";
 
 #pragma mark - Map Table Setters -
 
-- (void)kg_setSeparatorView:(UIView *)separatorView type:(KGViewSeparatorType)type {
+- (void)kg_setSeparatorView:(UIView *)separatorView ofType:(KGViewSeparatorType)type {
     [[self kg_viewMapTable] setObject:separatorView forKey:[self kg_separatorViewKeyOfType:type]];
 }
 
