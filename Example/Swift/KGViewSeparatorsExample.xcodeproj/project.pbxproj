@@ -14,7 +14,6 @@
 		01C486A31C31C078004E91E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01C486A11C31C078004E91E5 /* LaunchScreen.storyboard */; };
 		01E835471C31C0E800B59665 /* KGViewSeparatorConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E835431C31C0E800B59665 /* KGViewSeparatorConfiguration.m */; };
 		01E835481C31C0E800B59665 /* KGViewSeparatorConfiguration+Defaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E835441C31C0E800B59665 /* KGViewSeparatorConfiguration+Defaults.m */; };
-		01E835491C31C0E800B59665 /* UITableViewCell+KGViewSeparators.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E835451C31C0E800B59665 /* UITableViewCell+KGViewSeparators.m */; };
 		01E8354A1C31C0E800B59665 /* UIView+KGViewSeparators.m in Sources */ = {isa = PBXBuildFile; fileRef = 01E835461C31C0E800B59665 /* UIView+KGViewSeparators.m */; };
 		01E8354D1C31C2C100B59665 /* UITableViewCell+Separators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E8354C1C31C2C100B59665 /* UITableViewCell+Separators.swift */; };
 /* End PBXBuildFile section */
@@ -29,11 +28,9 @@
 		01C486A41C31C078004E91E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01E8353F1C31C0E800B59665 /* KGViewSeparatorConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGViewSeparatorConfiguration.h; sourceTree = "<group>"; };
 		01E835401C31C0E800B59665 /* KGViewSeparatorConfiguration+Defaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KGViewSeparatorConfiguration+Defaults.h"; sourceTree = "<group>"; };
-		01E835411C31C0E800B59665 /* UITableViewCell+KGViewSeparators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+KGViewSeparators.h"; sourceTree = "<group>"; };
 		01E835421C31C0E800B59665 /* UIView+KGViewSeparators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KGViewSeparators.h"; sourceTree = "<group>"; };
 		01E835431C31C0E800B59665 /* KGViewSeparatorConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGViewSeparatorConfiguration.m; sourceTree = "<group>"; };
 		01E835441C31C0E800B59665 /* KGViewSeparatorConfiguration+Defaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KGViewSeparatorConfiguration+Defaults.m"; sourceTree = "<group>"; };
-		01E835451C31C0E800B59665 /* UITableViewCell+KGViewSeparators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+KGViewSeparators.m"; sourceTree = "<group>"; };
 		01E835461C31C0E800B59665 /* UIView+KGViewSeparators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KGViewSeparators.m"; sourceTree = "<group>"; };
 		01E8354B1C31C11700B59665 /* KGViewSeparatorsExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KGViewSeparatorsExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		01E8354C1C31C2C100B59665 /* UITableViewCell+Separators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Separators.swift"; sourceTree = "<group>"; };
@@ -91,8 +88,6 @@
 				01E835431C31C0E800B59665 /* KGViewSeparatorConfiguration.m */,
 				01E835401C31C0E800B59665 /* KGViewSeparatorConfiguration+Defaults.h */,
 				01E835441C31C0E800B59665 /* KGViewSeparatorConfiguration+Defaults.m */,
-				01E835411C31C0E800B59665 /* UITableViewCell+KGViewSeparators.h */,
-				01E835451C31C0E800B59665 /* UITableViewCell+KGViewSeparators.m */,
 			);
 			name = KGViewSeparators;
 			path = ../../../KGViewSeparators;
@@ -174,7 +169,6 @@
 				01C486991C31C078004E91E5 /* AppDelegate.swift in Sources */,
 				01E835471C31C0E800B59665 /* KGViewSeparatorConfiguration.m in Sources */,
 				01E8354A1C31C0E800B59665 /* UIView+KGViewSeparators.m in Sources */,
-				01E835491C31C0E800B59665 /* UITableViewCell+KGViewSeparators.m in Sources */,
 				01E835481C31C0E800B59665 /* KGViewSeparatorConfiguration+Defaults.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

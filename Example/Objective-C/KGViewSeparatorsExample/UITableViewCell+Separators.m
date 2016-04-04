@@ -33,7 +33,7 @@
 }
 
 - (void)showBlackBottomSeparator:(BOOL)show {
-    [self.contentView kg_show:show separator:KGViewSeparatorBottom color:[UIColor greenColor] lineWidth:[KGViewSeparatorConfiguration defaultLineWidth] insets:UIEdgeInsetsMake(0, 15, 0, 15)];
+    [self.contentView kg_show:show separator:KGViewSeparatorBottom color:[UIColor blackColor] lineWidth:2.0 insets:UIEdgeInsetsMake(0, 0, 0, 40)];
 }
 
 @end

@@ -10,10 +10,10 @@ import Foundation
 
 extension UITableViewCell {
     func showTopSeparator(show: Bool) {
-        self.kg_showTopSeparator(show, color: UIColor.blackColor(), lineWidth: (1.0 / UIScreen.mainScreen().scale), insets: UIEdgeInsetsZero)
+        self.contentView.kg_show(show, separator: .Top, color:  UIColor.blackColor(), lineWidth: (1.0 / UIScreen.mainScreen().scale), insets: UIEdgeInsetsZero)
     }
     
     func showBottomSeparator(show: Bool) {
-        self.kg_showBottomSeparator(show, color: UIColor.blackColor(), lineWidth: (1.0 / UIScreen.mainScreen().scale), insets: UIEdgeInsetsZero)
+        self.contentView.kg_show(show, separator: .Bottom, color:  UIColor.blackColor(), lineWidth: (1.0 / UIScreen.mainScreen().scale), insets: UIEdgeInsetsZero)
     }
 }

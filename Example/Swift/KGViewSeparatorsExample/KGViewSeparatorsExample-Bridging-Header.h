@@ -3,4 +3,3 @@
 //
 
 #import "UIView+KGViewSeparators.h"
-#import "UITableViewCell+KGViewSeparators.h"
