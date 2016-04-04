@@ -10,10 +10,8 @@
 		012E7DC51C32FD3000280D0E /* KGViewSeparatorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 012E7DC41C32FD3000280D0E /* KGViewSeparatorsTests.m */; };
 		015C773F1C330C9A00ED8ADE /* KGViewSeparatorConfiguration+Defaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C77381C330C9A00ED8ADE /* KGViewSeparatorConfiguration+Defaults.m */; };
 		015C77401C330C9A00ED8ADE /* KGViewSeparatorConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C773A1C330C9A00ED8ADE /* KGViewSeparatorConfiguration.m */; };
-		015C77411C330C9A00ED8ADE /* UITableViewCell+KGViewSeparators.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C773C1C330C9A00ED8ADE /* UITableViewCell+KGViewSeparators.m */; };
 		015C77421C330C9A00ED8ADE /* UIView+KGViewSeparators.m in Sources */ = {isa = PBXBuildFile; fileRef = 015C773E1C330C9A00ED8ADE /* UIView+KGViewSeparators.m */; };
 		01EF7B321C3839DD00D9852B /* KGViewSeparatorsViewHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF7B311C3839DD00D9852B /* KGViewSeparatorsViewHelperTests.m */; };
-		01EF7B361C383A6E00D9852B /* KGViewSeparatorsCellHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01EF7B351C383A6E00D9852B /* KGViewSeparatorsCellHelperTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,12 +22,9 @@
 		015C77381C330C9A00ED8ADE /* KGViewSeparatorConfiguration+Defaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KGViewSeparatorConfiguration+Defaults.m"; sourceTree = "<group>"; };
 		015C77391C330C9A00ED8ADE /* KGViewSeparatorConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGViewSeparatorConfiguration.h; sourceTree = "<group>"; };
 		015C773A1C330C9A00ED8ADE /* KGViewSeparatorConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGViewSeparatorConfiguration.m; sourceTree = "<group>"; };
-		015C773B1C330C9A00ED8ADE /* UITableViewCell+KGViewSeparators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+KGViewSeparators.h"; sourceTree = "<group>"; };
-		015C773C1C330C9A00ED8ADE /* UITableViewCell+KGViewSeparators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+KGViewSeparators.m"; sourceTree = "<group>"; };
 		015C773D1C330C9A00ED8ADE /* UIView+KGViewSeparators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KGViewSeparators.h"; sourceTree = "<group>"; };
 		015C773E1C330C9A00ED8ADE /* UIView+KGViewSeparators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KGViewSeparators.m"; sourceTree = "<group>"; };
 		01EF7B311C3839DD00D9852B /* KGViewSeparatorsViewHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGViewSeparatorsViewHelperTests.m; sourceTree = "<group>"; };
-		01EF7B351C383A6E00D9852B /* KGViewSeparatorsCellHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGViewSeparatorsCellHelperTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +59,6 @@
 			children = (
 				012E7DC41C32FD3000280D0E /* KGViewSeparatorsTests.m */,
 				01EF7B311C3839DD00D9852B /* KGViewSeparatorsViewHelperTests.m */,
-				01EF7B351C383A6E00D9852B /* KGViewSeparatorsCellHelperTests.m */,
 				012E7DC61C32FD3000280D0E /* Info.plist */,
 				015C77361C330C9A00ED8ADE /* KGViewSeparators */,
 			);
@@ -78,8 +72,6 @@
 				015C77381C330C9A00ED8ADE /* KGViewSeparatorConfiguration+Defaults.m */,
 				015C77391C330C9A00ED8ADE /* KGViewSeparatorConfiguration.h */,
 				015C773A1C330C9A00ED8ADE /* KGViewSeparatorConfiguration.m */,
-				015C773B1C330C9A00ED8ADE /* UITableViewCell+KGViewSeparators.h */,
-				015C773C1C330C9A00ED8ADE /* UITableViewCell+KGViewSeparators.m */,
 				015C773D1C330C9A00ED8ADE /* UIView+KGViewSeparators.h */,
 				015C773E1C330C9A00ED8ADE /* UIView+KGViewSeparators.m */,
 			);
@@ -152,12 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01EF7B361C383A6E00D9852B /* KGViewSeparatorsCellHelperTests.m in Sources */,
 				01EF7B321C3839DD00D9852B /* KGViewSeparatorsViewHelperTests.m in Sources */,
 				015C77421C330C9A00ED8ADE /* UIView+KGViewSeparators.m in Sources */,
 				012E7DC51C32FD3000280D0E /* KGViewSeparatorsTests.m in Sources */,
 				015C773F1C330C9A00ED8ADE /* KGViewSeparatorConfiguration+Defaults.m in Sources */,
-				015C77411C330C9A00ED8ADE /* UITableViewCell+KGViewSeparators.m in Sources */,
 				015C77401C330C9A00ED8ADE /* KGViewSeparatorConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

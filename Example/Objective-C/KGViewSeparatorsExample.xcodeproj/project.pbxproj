@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		010201391C30DC4A0004411D /* UITableViewCell+KGViewSeparators.m in Sources */ = {isa = PBXBuildFile; fileRef = 010201381C30DC4A0004411D /* UITableViewCell+KGViewSeparators.m */; };
 		0102013C1C30DE840004411D /* KGViewSeparatorConfiguration+Defaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 0102013B1C30DE840004411D /* KGViewSeparatorConfiguration+Defaults.m */; };
 		0123D1C51C3073B200A4B9F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0123D1C41C3073B200A4B9F9 /* main.m */; };
 		0123D1C81C3073B200A4B9F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0123D1C71C3073B200A4B9F9 /* AppDelegate.m */; };
@@ -21,8 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		010201371C30DC4A0004411D /* UITableViewCell+KGViewSeparators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+KGViewSeparators.h"; sourceTree = "<group>"; };
-		010201381C30DC4A0004411D /* UITableViewCell+KGViewSeparators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+KGViewSeparators.m"; sourceTree = "<group>"; };
 		0102013A1C30DE840004411D /* KGViewSeparatorConfiguration+Defaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KGViewSeparatorConfiguration+Defaults.h"; sourceTree = "<group>"; };
 		0102013B1C30DE840004411D /* KGViewSeparatorConfiguration+Defaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KGViewSeparatorConfiguration+Defaults.m"; sourceTree = "<group>"; };
 		0123D1C01C3073B200A4B9F9 /* KGViewSeparatorsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KGViewSeparatorsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,8 +103,6 @@
 				0171A76F1C30778C00DCF3D9 /* KGViewSeparatorConfiguration.m */,
 				0102013A1C30DE840004411D /* KGViewSeparatorConfiguration+Defaults.h */,
 				0102013B1C30DE840004411D /* KGViewSeparatorConfiguration+Defaults.m */,
-				010201371C30DC4A0004411D /* UITableViewCell+KGViewSeparators.h */,
-				010201381C30DC4A0004411D /* UITableViewCell+KGViewSeparators.m */,
 			);
 			name = KGViewSeparators;
 			path = ../../../KGViewSeparators;
@@ -185,7 +180,6 @@
 			files = (
 				0123D1CB1C3073B200A4B9F9 /* ViewController.m in Sources */,
 				0171A76D1C3075AC00DCF3D9 /* UIView+KGViewSeparators.m in Sources */,
-				010201391C30DC4A0004411D /* UITableViewCell+KGViewSeparators.m in Sources */,
 				0102013C1C30DE840004411D /* KGViewSeparatorConfiguration+Defaults.m in Sources */,
 				0123D1C81C3073B200A4B9F9 /* AppDelegate.m in Sources */,
 				0171A7701C30778C00DCF3D9 /* KGViewSeparatorConfiguration.m in Sources */,

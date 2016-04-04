@@ -39,19 +39,19 @@
 
 - (void)testTopSeparatorColorOption {
     XCTAssert(self.view.subviews.count == 0);
-    [self.view kg_showTopSeparator:true color:self.color];
+    [self.view kg_show:true separator:KGViewSeparatorTop color:self.color];
     XCTAssert(self.view.subviews.count == 1);
 }
 
 - (void)testTopSeparatorColorLineWidthOptions {
     XCTAssert(self.view.subviews.count == 0);
-    [self.view kg_showTopSeparator:true color:self.color lineWidth:self.lineWidth];
+    [self.view kg_show:true separator:KGViewSeparatorTop color:self.color lineWidth:self.lineWidth];
     XCTAssert(self.view.subviews.count == 1);
 }
 
 - (void)testTopSeparatorAllOptions {
     XCTAssert(self.view.subviews.count == 0);
-    [self.view kg_showTopSeparator:true color:self.color lineWidth:self.lineWidth insets:self.insets];
+    [self.view kg_show:true separator:KGViewSeparatorTop color:self.color lineWidth:self.lineWidth insets:self.insets];
     XCTAssert(self.view.subviews.count == 1);
 }
 
@@ -59,19 +59,19 @@
 
 - (void)testBottomSeparatorColorOption {
     XCTAssert(self.view.subviews.count == 0);
-    [self.view kg_showBottomSeparator:true color:self.color];
+    [self.view kg_show:true separator:KGViewSeparatorBottom color:self.color];
     XCTAssert(self.view.subviews.count == 1);
 }
 
 - (void)testBottomSeparatorColorLineWidthOptions {
     XCTAssert(self.view.subviews.count == 0);
-    [self.view kg_showBottomSeparator:true color:self.color lineWidth:self.lineWidth];
+    [self.view kg_show:true separator:KGViewSeparatorBottom color:self.color lineWidth:self.lineWidth];
     XCTAssert(self.view.subviews.count == 1);
 }
 
 - (void)testBottomSeparatorAllOptions {
     XCTAssert(self.view.subviews.count == 0);
-    [self.view kg_showBottomSeparator:true color:self.color lineWidth:self.lineWidth insets:self.insets];
+    [self.view kg_show:true separator:KGViewSeparatorBottom color:self.color lineWidth:self.lineWidth insets:self.insets];
     XCTAssert(self.view.subviews.count == 1);
 }
 

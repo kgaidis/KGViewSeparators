@@ -39,21 +39,12 @@ typedef NS_ENUM(NSUInteger, KGViewSeparatorType) {
 #pragma mark - Main Interface -
 
 - (void)kg_show:(BOOL)show separator:(KGViewSeparatorType)type configuration:(KGViewSeparatorConfiguration *)configuration;
-
-
-- (void)kg_showTopSeparator:(BOOL)show configuration:(KGViewSeparatorConfiguration *)configuration;
-- (void)kg_showBottomSeparator:(BOOL)show configuration:(KGViewSeparatorConfiguration *)configuration;
-
 - (KGViewSeparatorConfiguration *)kg_configurationForSeparatorOfType:(KGViewSeparatorType)type;
 
 #pragma mark - Helper Interface -
 
-- (void)kg_showTopSeparator:(BOOL)show color:(UIColor *)color;
-- (void)kg_showTopSeparator:(BOOL)show color:(UIColor *)color lineWidth:(CGFloat)lineWidth;
-- (void)kg_showTopSeparator:(BOOL)show color:(UIColor *)color lineWidth:(CGFloat)lineWidth insets:(UIEdgeInsets)insets;
-
-- (void)kg_showBottomSeparator:(BOOL)show color:(UIColor *)color;
-- (void)kg_showBottomSeparator:(BOOL)show color:(UIColor *)color lineWidth:(CGFloat)lineWidth;
-- (void)kg_showBottomSeparator:(BOOL)show color:(UIColor *)color lineWidth:(CGFloat)lineWidth insets:(UIEdgeInsets)insets;
+- (void)kg_show:(BOOL)show separator:(KGViewSeparatorType)type color:(UIColor *)color;
+- (void)kg_show:(BOOL)show separator:(KGViewSeparatorType)type color:(UIColor *)color lineWidth:(CGFloat)lineWidth;
+- (void)kg_show:(BOOL)show separator:(KGViewSeparatorType)type color:(UIColor *)color lineWidth:(CGFloat)lineWidth insets:(UIEdgeInsets)insets;
 
 @end

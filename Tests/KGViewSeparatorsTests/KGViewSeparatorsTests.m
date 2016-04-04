@@ -35,44 +35,44 @@
 
 - (void)testAddingTopSeparator {
     XCTAssert(self.view.subviews.count == 0);
-    [self.view kg_showTopSeparator:true configuration:self.defaultConfiguration];
+    [self.view kg_show:true separator:KGViewSeparatorTop configuration:self.defaultConfiguration];
     XCTAssert(self.view.subviews.count == 1);
 }
 
 - (void)testAddingBottomSeparator {
     XCTAssert(self.view.subviews.count == 0);
-    [self.view kg_showBottomSeparator:true configuration:self.defaultConfiguration];
+    [self.view kg_show:true separator:KGViewSeparatorBottom configuration:self.defaultConfiguration];
     XCTAssert(self.view.subviews.count == 1);
 }
 
 - (void)testAddingMultipleTopSeparators {
-    [self.view kg_showTopSeparator:true configuration:self.defaultConfiguration];
-    [self.view kg_showTopSeparator:true configuration:self.defaultConfiguration];
+    [self.view kg_show:true separator:KGViewSeparatorTop configuration:self.defaultConfiguration];
+    [self.view kg_show:true separator:KGViewSeparatorTop configuration:self.defaultConfiguration];
     XCTAssert(self.view.subviews.count == 1);
 }
 
 - (void)testAddingMultipleBottomSeparators {
-    [self.view kg_showBottomSeparator:true configuration:self.defaultConfiguration];
-    [self.view kg_showBottomSeparator:true configuration:self.defaultConfiguration];
+    [self.view kg_show:true separator:KGViewSeparatorBottom configuration:self.defaultConfiguration];
+    [self.view kg_show:true separator:KGViewSeparatorBottom configuration:self.defaultConfiguration];
     XCTAssert(self.view.subviews.count == 1);
 }
 
 #pragma mark - Separator Views and Configuration Interaction -
 
 - (void)testConfigurationColorAffectingTopSeparator {
-    [self.view kg_showTopSeparator:true configuration:self.defaultConfiguration];
+    [self.view kg_show:true separator:KGViewSeparatorTop configuration:self.defaultConfiguration];
     XCTAssert([self.view.subviews[0].backgroundColor isEqual:self.defaultConfiguration.color]);
 }
 
 - (void)testConfigurationColorAffectingBottomSeparator {
-    [self.view kg_showBottomSeparator:true configuration:self.defaultConfiguration];
+    [self.view kg_show:true separator:KGViewSeparatorBottom configuration:self.defaultConfiguration];
     XCTAssert([self.view.subviews[0].backgroundColor isEqual:self.defaultConfiguration.color]);
 }
 
 - (void)testConfigurationLineWidthAffectingTopSeparator {
     CGFloat lineWidth = 2.0;
     KGViewSeparatorConfiguration *configuration = [[KGViewSeparatorConfiguration alloc] initWithColor:[UIColor blackColor] lineWidth:lineWidth insets:UIEdgeInsetsZero];
-    [self.view kg_showTopSeparator:true configuration:configuration];
+    [self.view kg_show:true separator:KGViewSeparatorTop configuration:configuration];
     XCTAssert(self.view.subviews[0].frame.size.height == 0);
     [self.view setNeedsLayout];
     [self.view layoutIfNeeded];
@@ -82,7 +82,7 @@
 - (void)testConfigurationLineWidthAffectingBottomSeparator {
     CGFloat lineWidth = 2.0;
     KGViewSeparatorConfiguration *configuration = [[KGViewSeparatorConfiguration alloc] initWithColor:[UIColor blackColor] lineWidth:lineWidth insets:UIEdgeInsetsZero];
-    [self.view kg_showBottomSeparator:true configuration:configuration];
+    [self.view kg_show:true separator:KGViewSeparatorBottom configuration:configuration];
     XCTAssert(self.view.subviews[0].frame.size.height == 0);
     [self.view setNeedsLayout];
     [self.view layoutIfNeeded];
@@ -92,7 +92,7 @@
 - (void)testConfigurationInsetsAffectingTopSeparator {
     UIEdgeInsets insets = UIEdgeInsetsMake(0, 15, 0, 15);
     KGViewSeparatorConfiguration *configuration = [[KGViewSeparatorConfiguration alloc] initWithColor:[UIColor blackColor] lineWidth:1.0 insets:insets];
-    [self.view kg_showTopSeparator:true configuration:configuration];
+    [self.view kg_show:true separator:KGViewSeparatorTop configuration:configuration];
     [self.view setNeedsLayout];
     [self.view layoutIfNeeded];
     XCTAssert(self.view.subviews[0].frame.origin.x == insets.left);
@@ -102,7 +102,7 @@
 - (void)testConfigurationInsetsAffectingBottomSeparator {
     UIEdgeInsets insets = UIEdgeInsetsMake(0, 15, 0, 15);
     KGViewSeparatorConfiguration *configuration = [[KGViewSeparatorConfiguration alloc] initWithColor:[UIColor blackColor] lineWidth:1.0 insets:insets];
-    [self.view kg_showBottomSeparator:true configuration:configuration];
+    [self.view kg_show:true separator:KGViewSeparatorBottom configuration:configuration];
     [self.view setNeedsLayout];
     [self.view layoutIfNeeded];
     XCTAssert(self.view.subviews[0].frame.origin.x == insets.left);
@@ -110,33 +110,33 @@
 }
 
 - (void)testConfigurationChangesForTopSeparator {
-    [self.view kg_showTopSeparator:true configuration:self.defaultConfiguration];
+    [self.view kg_show:true separator:KGViewSeparatorTop configuration:self.defaultConfiguration];
     XCTAssert([self.view.subviews[0].backgroundColor isEqual:self.defaultConfiguration.color]);
     KGViewSeparatorConfiguration *newConfiguration = [[KGViewSeparatorConfiguration alloc] initWithColor:[UIColor purpleColor] lineWidth:1.0 insets:UIEdgeInsetsZero];
-    [self.view kg_showTopSeparator:true configuration:newConfiguration];
+    [self.view kg_show:true separator:KGViewSeparatorTop configuration:newConfiguration];
     XCTAssert([self.view.subviews[0].backgroundColor isEqual:newConfiguration.color]);
 }
 
 - (void)testConfigurationChangesForBottomSeparator {
-    [self.view kg_showBottomSeparator:true configuration:self.defaultConfiguration];
+    [self.view kg_show:true separator:KGViewSeparatorBottom configuration:self.defaultConfiguration];
     XCTAssert([self.view.subviews[0].backgroundColor isEqual:self.defaultConfiguration.color]);
     KGViewSeparatorConfiguration *newConfiguration = [[KGViewSeparatorConfiguration alloc] initWithColor:[UIColor purpleColor] lineWidth:1.0 insets:UIEdgeInsetsZero];
-    [self.view kg_showBottomSeparator:true configuration:newConfiguration];
+    [self.view kg_show:true separator:KGViewSeparatorBottom configuration:newConfiguration];
     XCTAssert([self.view.subviews[0].backgroundColor isEqual:newConfiguration.color]);
 }
 #pragma mark - Test Showing / Hiding -
 
 - (void)testShowingAndHidingTopSeparator {
-    [self.view kg_showTopSeparator:true configuration:self.defaultConfiguration];
+    [self.view kg_show:true separator:KGViewSeparatorTop configuration:self.defaultConfiguration];
     XCTAssert(self.view.subviews[0].hidden == NO);
-    [self.view kg_showTopSeparator:false configuration:self.defaultConfiguration];
+    [self.view kg_show:false separator:KGViewSeparatorTop configuration:self.defaultConfiguration];
     XCTAssert(self.view.subviews[0].hidden == YES);
 }
 
 - (void)testShowingAndHidingBottomSeparator {
-    [self.view kg_showBottomSeparator:true configuration:self.defaultConfiguration];
+    [self.view kg_show:true separator:KGViewSeparatorBottom configuration:self.defaultConfiguration];
     XCTAssert(self.view.subviews[0].hidden == NO);
-    [self.view kg_showBottomSeparator:false configuration:self.defaultConfiguration];
+    [self.view kg_show:false separator:KGViewSeparatorBottom configuration:self.defaultConfiguration];
     XCTAssert(self.view.subviews[0].hidden == YES);
 }
 
@@ -144,27 +144,27 @@
 
 - (void)testTopSeparatorConstraintsExistance {
     XCTAssert(self.view.constraints.count == 0);
-    [self.view kg_showTopSeparator:true configuration:self.defaultConfiguration];
+    [self.view kg_show:true separator:KGViewSeparatorTop configuration:self.defaultConfiguration];
     XCTAssert(self.view.constraints.count > 0);
 }
 
 - (void)testBottomSeparatorConstraintsExistance {
     XCTAssert(self.view.constraints.count == 0);
-    [self.view kg_showTopSeparator:true configuration:self.defaultConfiguration];
+    [self.view kg_show:true separator:KGViewSeparatorTop configuration:self.defaultConfiguration];
     XCTAssert(self.view.constraints.count > 0);
 }
 
 - (void)testConstraintsPilingUpForTopSeparator {
-    [self.view kg_showTopSeparator:true configuration:self.defaultConfiguration];
+    [self.view kg_show:true separator:KGViewSeparatorTop configuration:self.defaultConfiguration];
     NSInteger amountOfConstraints = self.view.constraints.count;
-    [self.view kg_showTopSeparator:true configuration:self.defaultConfiguration];
+    [self.view kg_show:true separator:KGViewSeparatorTop configuration:self.defaultConfiguration];
     XCTAssert(self.view.constraints.count == amountOfConstraints);
 }
 
 - (void)testConstraintsPilingUpForBottomSeparator {
-    [self.view kg_showBottomSeparator:true configuration:self.defaultConfiguration];
+    [self.view kg_show:true separator:KGViewSeparatorBottom configuration:self.defaultConfiguration];
     NSInteger amountOfConstraints = self.view.constraints.count;
-    [self.view kg_showBottomSeparator:true configuration:self.defaultConfiguration];
+    [self.view kg_show:true separator:KGViewSeparatorBottom configuration:self.defaultConfiguration];
     XCTAssert(self.view.constraints.count == amountOfConstraints);
 }
 
