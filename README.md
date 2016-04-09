@@ -27,17 +27,37 @@ Alternatively, drag and drop all of the files in the KGViewSeparators folder int
 
 ```objective-c
 #import <UIView+KGViewSeparators.h>
-#import <UITableViewCell+KGViewSeparators.h>
 ```
 
 ### Usage:
 
+**Enum:**
+
 ```objective-c
-[view kg_showTopSeparator:YES color:[UIColor blackColor] lineWidth:1.0 insets:UIEdgeInsetsZero];
-[view kg_showBottomSeparator:YES color:[UIColor blackColor] lineWidth:1.0 insets:UIEdgeInsetsZero];
+KGViewSeparatorTop
+KGViewSeparatorBottom
 ```
 
-### Recommended usage:
+**Objective-C:**
+
+```objective-c
+[view kg_show:YES separator:KGViewSeparatorTop color:[UIColor blackColor] lineWidth:KGViewSeparatorLineWidth(1.0) insets:UIEdgeInsetsMake(0, 15.0, 0, 15.0)];
+```
+**Swift:**
+
+```swift
+view.kg_show(true, separator: .Bottom, color:  UIColor.blackColor(), lineWidth: KGViewSeparatorLineWidth(1.0), insets: UIEdgeInsetsZero)
+```
+
+**Helper function:**
+
+Line widths should be divided by the screen scale for proper pixel rendering.
+
+```
+CGFloat KGViewSeparatorLineWidth(CGFloat lineWidth);
+```
+
+## Recommended Usage
 Create your own category to simplify code.
 
 ```objective-c
@@ -49,19 +69,19 @@ Create your own category to simplify code.
 ```
 
 ```objective-c
-#import <UITableViewCell+KGViewSeparators.h>
+#import <UIView+KGViewSeparators.h>
 @implementation UITableViewCell (Separators)
 - (void)showTopSeparator:(BOOL)show {
-    [self kg_showTopSeparator:show color:[UIColor blackColor] lineWidth:1.0 insets:UIEdgeInsetsZero];
+    [self.contentView kg_show:show separator:KGViewSeparatorTop color:[UIColor blackColor] lineWidth:KGViewSeparatorLineWidth(1.0) insets:UIEdgeInsetsMake(0, 15.0, 0, 15.0)];
 }
 - (void)showBottomSeparator:(BOOL)show {
-    [self kg_showBottomSeparator:show color:[UIColor blackColor] lineWidth:1.0 insets:UIEdgeInsetsZero];
+    [self.contentView kg_show:show separator:KGViewSeparatorBottom color:[UIColor blackColor] lineWidth:KGViewSeparatorLineWidth(1.0) insets:UIEdgeInsetsMake(0, 15.0, 0, 15.0)];
 }
 @end
 ```
 
 ### Important note:
-While there is a helper `UITableViewCell` category, it's important to add separators to the **content view** of the cell.
+When adding separators to cells it's important to add separators to the `contentView`.
 
 ## Swift Support
 KGViewSeparators works with Swift! Checkout the Swift example in the "Examples" folder.

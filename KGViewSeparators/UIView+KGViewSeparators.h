@@ -30,9 +30,11 @@
 #import "KGViewSeparatorConfiguration.h"
 
 typedef NS_ENUM(NSUInteger, KGViewSeparatorType) {
-    KGViewSeparatorTop      = 1 << 0,
-    KGViewSeparatorBottom   = 1 << 1
+    KGViewSeparatorTop,
+    KGViewSeparatorBottom
 };
+
+CGFloat KGViewSeparatorLineWidth(CGFloat lineWidth);
 
 @interface UIView (KGViewSeparators)
 

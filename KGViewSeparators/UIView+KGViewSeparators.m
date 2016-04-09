@@ -30,6 +30,10 @@
 #import <objc/runtime.h>
 #import "KGViewSeparatorConfiguration+Defaults.h"
 
+CGFloat KGViewSeparatorLineWidth(CGFloat lineWidth) {
+    return (lineWidth / [UIScreen mainScreen].scale);
+}
+
 // Associated Objects
 static char kKGMapTableKey;
 static char kKGDictionaryKey;
