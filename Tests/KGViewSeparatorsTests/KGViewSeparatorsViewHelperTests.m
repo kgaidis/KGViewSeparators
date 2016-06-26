@@ -75,4 +75,13 @@
     XCTAssert(self.view.subviews.count == 1);
 }
 
+#pragma mark - Other
+
+- (void)testReturningSeparatorView {
+    UIView *separatorInserted = [self.view kg_show:true separator:KGViewSeparatorTop color:self.color lineWidth:self.lineWidth insets:self.insets];
+    XCTAssertNotNil(separatorInserted);
+    separatorInserted = [self.view kg_show:false separator:KGViewSeparatorTop color:self.color lineWidth:self.lineWidth insets:self.insets];
+    XCTAssertNotNil(separatorInserted);
+}
+
 @end

@@ -40,13 +40,13 @@ CGFloat KGViewSeparatorLineWidth(CGFloat lineWidth);
 
 #pragma mark - Main Interface -
 
-- (void)kg_show:(BOOL)show separator:(KGViewSeparatorType)type configuration:(KGViewSeparatorConfiguration *)configuration;
+- (UIView *)kg_show:(BOOL)show separator:(KGViewSeparatorType)type configuration:(KGViewSeparatorConfiguration *)configuration;
 - (KGViewSeparatorConfiguration *)kg_configurationForSeparatorOfType:(KGViewSeparatorType)type;
 
 #pragma mark - Helper Interface -
 
-- (void)kg_show:(BOOL)show separator:(KGViewSeparatorType)type color:(UIColor *)color;
-- (void)kg_show:(BOOL)show separator:(KGViewSeparatorType)type color:(UIColor *)color lineWidth:(CGFloat)lineWidth;
-- (void)kg_show:(BOOL)show separator:(KGViewSeparatorType)type color:(UIColor *)color lineWidth:(CGFloat)lineWidth insets:(UIEdgeInsets)insets;
+- (UIView *)kg_show:(BOOL)show separator:(KGViewSeparatorType)type color:(UIColor *)color;
+- (UIView *)kg_show:(BOOL)show separator:(KGViewSeparatorType)type color:(UIColor *)color lineWidth:(CGFloat)lineWidth;
+- (UIView *)kg_show:(BOOL)show separator:(KGViewSeparatorType)type color:(UIColor *)color lineWidth:(CGFloat)lineWidth insets:(UIEdgeInsets)insets;
 
 @end

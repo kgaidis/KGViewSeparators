@@ -45,7 +45,7 @@ static NSString *const kKGViewKey = @"ViewKey";
 
 #pragma mark - Main Public Methods -
 
-- (void)kg_show:(BOOL)show separator:(KGViewSeparatorType)type configuration:(KGViewSeparatorConfiguration *)newConfiguration {
+- (UIView *)kg_show:(BOOL)show separator:(KGViewSeparatorType)type configuration:(KGViewSeparatorConfiguration *)newConfiguration {
     if (show) {
         NSAssert(newConfiguration, @"For a separator view to be shown correctly, a configuration must be provided.");
     }
@@ -65,26 +65,28 @@ static NSString *const kKGViewKey = @"ViewKey";
     }
     
     separator.hidden = !show;
+    
+    return separator;
 }
 
 #pragma mark - Public Helper Methods -
 
-- (void)kg_show:(BOOL)show separator:(KGViewSeparatorType)type color:(UIColor *)color {
-    [self kg_show:show separator:type color:color lineWidth:[KGViewSeparatorConfiguration defaultLineWidth]];
+- (UIView *)kg_show:(BOOL)show separator:(KGViewSeparatorType)type color:(UIColor *)color {
+    return [self kg_show:show separator:type color:color lineWidth:[KGViewSeparatorConfiguration defaultLineWidth]];
 }
 
-- (void)kg_show:(BOOL)show separator:(KGViewSeparatorType)type color:(UIColor *)color lineWidth:(CGFloat)lineWidth {
-    [self kg_show:show separator:type color:color lineWidth:lineWidth insets:[KGViewSeparatorConfiguration defaultInsets]];
+- (UIView *)kg_show:(BOOL)show separator:(KGViewSeparatorType)type color:(UIColor *)color lineWidth:(CGFloat)lineWidth {
+    return [self kg_show:show separator:type color:color lineWidth:lineWidth insets:[KGViewSeparatorConfiguration defaultInsets]];
 }
 
-- (void)kg_show:(BOOL)show separator:(KGViewSeparatorType)type color:(UIColor *)color lineWidth:(CGFloat)lineWidth insets:(UIEdgeInsets)insets {
+- (UIView *)kg_show:(BOOL)show separator:(KGViewSeparatorType)type color:(UIColor *)color lineWidth:(CGFloat)lineWidth insets:(UIEdgeInsets)insets {
     
     KGViewSeparatorConfiguration *configuration = nil;
     if (show) {
         configuration = [[KGViewSeparatorConfiguration alloc] initWithColor:color lineWidth:lineWidth insets:insets];
     }
     
-    [self kg_show:show separator:type configuration:configuration];
+    return [self kg_show:show separator:type configuration:configuration];
 }
 
 #pragma mark - Private -
