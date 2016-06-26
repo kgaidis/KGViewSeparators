@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = 'KGViewSeparators'
-  s.version      = '0.9.0'
-  s.source       = { :git => 'https://github.com/kgaidis/KGViewSeparators.git', :tag => '0.9.0' }
+  s.version      = '0.9.1'
+  s.source       = { :git => 'https://github.com/kgaidis/KGViewSeparators.git', :tag => '0.9.1' }
   s.source_files = 'KGViewSeparators/*.{h,m}'
   s.platform     = :ios, '7.0'
   s.requires_arc = true
