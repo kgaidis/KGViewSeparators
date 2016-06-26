@@ -60,7 +60,7 @@ static NSString *const kKGViewKey = @"ViewKey";
     if (show && ![oldConfiguration isEqual:newConfiguration]) {
         [self kg_removeAllConstraintsForSeparatorView:separator];
         [self kg_addViewConstraintsForSeparatorOfType:type withConfiguration:newConfiguration];
-        [self kg_configureView:separator withConfiguration:newConfiguration];
+        [self kg_applyConfiguration:newConfiguration toView:separator];
         [self kg_setConfiguration:newConfiguration forSeparatorOfType:KGViewSeparatorTop];
     }
     
@@ -96,7 +96,8 @@ static NSString *const kKGViewKey = @"ViewKey";
     return view;
 }
 
-- (void)kg_configureView:(UIView *)view withConfiguration:(KGViewSeparatorConfiguration *)configuration {
+- (void)kg_applyConfiguration:(KGViewSeparatorConfiguration *)configuration toView:(UIView *)view
+{
     view.backgroundColor = configuration.color;
 }
 
